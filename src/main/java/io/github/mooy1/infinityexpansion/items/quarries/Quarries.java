@@ -123,9 +123,9 @@ public final class Quarries {
         }
 
         new Quarry(Groups.ADVANCED_MACHINES, BASIC_QUARRY, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MAGSTEEL_PLATE, SlimefunItems.CARBONADO_EDGED_CAPACITOR, Materials.MAGSTEEL_PLATE,
-                new ItemStack(Material.IRON_PICKAXE), SlimefunItems.GEO_MINER, new ItemStack(Material.IRON_PICKAXE),
-                Materials.MACHINE_CIRCUIT, Materials.MACHINE_CORE, Materials.MACHINE_CIRCUIT
+                Materials.MAGSTEEL_PLATE.item().clone(), SlimefunItems.CARBONADO_EDGED_CAPACITOR.item().clone(), Materials.MAGSTEEL_PLATE.item().clone(),
+                new ItemStack(Material.IRON_PICKAXE), SlimefunItems.GEO_MINER.item().clone(), new ItemStack(Material.IRON_PICKAXE),
+                Materials.MACHINE_CIRCUIT.item().clone(), Materials.MACHINE_CORE.item().clone(), Materials.MACHINE_CIRCUIT.item().clone()
         }, 1, 6, outputs.toArray(new Material[0])).energyPerTick(300).register(plugin);
 
         if (section.getBoolean("quartz")) {
@@ -144,9 +144,9 @@ public final class Quarries {
         }
 
         new Quarry(Groups.ADVANCED_MACHINES, ADVANCED_QUARRY, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MACHINE_PLATE, SlimefunItems.ENERGIZED_CAPACITOR, Materials.MACHINE_PLATE,
-                new ItemStack(Material.DIAMOND_PICKAXE), BASIC_QUARRY, new ItemStack(Material.DIAMOND_PICKAXE),
-                Materials.MACHINE_CIRCUIT, Materials.MACHINE_CORE, Materials.MACHINE_CIRCUIT
+                Materials.MACHINE_PLATE.item().clone(), SlimefunItems.ENERGIZED_CAPACITOR.item().clone(), Materials.MACHINE_PLATE.item().clone(),
+                new ItemStack(Material.DIAMOND_PICKAXE), BASIC_QUARRY.item().clone(), new ItemStack(Material.DIAMOND_PICKAXE),
+                Materials.MACHINE_CIRCUIT.item().clone(), Materials.MACHINE_CORE.item().clone(), Materials.MACHINE_CIRCUIT.item().clone()
         }, 2, 4, outputs.toArray(new Material[0])).energyPerTick(900).register(plugin);
 
         if (coal) {
@@ -154,9 +154,9 @@ public final class Quarries {
         }
 
         new Quarry(Groups.ADVANCED_MACHINES, VOID_QUARRY, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.VOID_INGOT, SlimefunExtension.VOID_CAPACITOR, Materials.VOID_INGOT,
-                new ItemStack(Material.NETHERITE_PICKAXE), ADVANCED_QUARRY, new ItemStack(Material.NETHERITE_PICKAXE),
-                Materials.MACHINE_CIRCUIT, Materials.MACHINE_CORE, Materials.MACHINE_CIRCUIT
+                Materials.VOID_INGOT.item().clone(), SlimefunExtension.VOID_CAPACITOR.item().clone(), Materials.VOID_INGOT.item().clone(),
+                new ItemStack(Material.NETHERITE_PICKAXE), ADVANCED_QUARRY.item().clone(), new ItemStack(Material.NETHERITE_PICKAXE),
+                Materials.MACHINE_CIRCUIT.item().clone(), Materials.MACHINE_CORE.item().clone(), Materials.MACHINE_CIRCUIT.item().clone()
         }, 6, 2, outputs.toArray(new Material[0])).energyPerTick(3600).register(plugin);
 
         if (coal) {
@@ -164,12 +164,12 @@ public final class Quarries {
         }
 
         new Quarry(Groups.INFINITY_CHEAT, INFINITY_QUARRY, InfinityWorkbench.TYPE, new ItemStack[] {
-                null, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, null,
-                Materials.MACHINE_PLATE, Gear.PICKAXE, Materials.INFINITE_CIRCUIT, Materials.INFINITE_CIRCUIT, Gear.PICKAXE, Materials.MACHINE_PLATE,
-                Materials.MACHINE_PLATE, VOID_QUARRY, Materials.INFINITE_CORE, Materials.INFINITE_CORE, VOID_QUARRY, Materials.MACHINE_PLATE,
-                Materials.VOID_INGOT, null, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, null, Materials.VOID_INGOT,
-                Materials.VOID_INGOT, null, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, null, Materials.VOID_INGOT,
-                Materials.VOID_INGOT, null, Materials.INFINITE_INGOT, Materials.INFINITE_INGOT, null, Materials.VOID_INGOT
+                null, Materials.MACHINE_PLATE.item().clone(), Materials.MACHINE_PLATE.item().clone(), Materials.MACHINE_PLATE.item().clone(), Materials.MACHINE_PLATE.item().clone(), null,
+                Materials.MACHINE_PLATE.item().clone(), Gear.PICKAXE.item().clone(), Materials.INFINITE_CIRCUIT.item().clone(), Materials.INFINITE_CIRCUIT.item().clone(), Gear.PICKAXE.item().clone(), Materials.MACHINE_PLATE.item().clone(),
+                Materials.MACHINE_PLATE.item().clone(), VOID_QUARRY.item().clone(), Materials.INFINITE_CORE.item().clone(), Materials.INFINITE_CORE.item().clone(), VOID_QUARRY.item().clone(), Materials.MACHINE_PLATE.item().clone(),
+                Materials.VOID_INGOT.item().clone(), null, Materials.INFINITE_INGOT.item().clone(), Materials.INFINITE_INGOT.item().clone(), null, Materials.VOID_INGOT.item().clone(),
+                Materials.VOID_INGOT.item().clone(), null, Materials.INFINITE_INGOT.item().clone(), Materials.INFINITE_INGOT.item().clone(), null, Materials.VOID_INGOT.item().clone(),
+                Materials.VOID_INGOT.item().clone(), null, Materials.INFINITE_INGOT.item().clone(), Materials.INFINITE_INGOT.item().clone(), null, Materials.VOID_INGOT.item().clone()
         }, 64, 1, outputs.toArray(new Material[0])).energyPerTick(36000).register(plugin);
     }
 

@@ -45,9 +45,9 @@ public final class Oscillator extends SlimefunItem {
 
     public Oscillator(SlimefunItemStack item, double chance) {
         super(Groups.MAIN_MATERIALS, item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MACHINE_PLATE, SlimefunItems.BLISTERING_INGOT_3, Materials.MACHINE_PLATE,
-                SlimefunItems.BLISTERING_INGOT_3, new ItemStack(item.getType()), SlimefunItems.BLISTERING_INGOT_3,
-                Materials.MACHINE_PLATE, SlimefunItems.BLISTERING_INGOT_3, Materials.MACHINE_PLATE
+                Materials.MACHINE_PLATE.item().clone(), SlimefunItems.BLISTERING_INGOT_3.item().clone(), Materials.MACHINE_PLATE.item().clone(),
+                SlimefunItems.BLISTERING_INGOT_3.item().clone(), new ItemStack(item.getType()), SlimefunItems.BLISTERING_INGOT_3.item().clone(),
+                Materials.MACHINE_PLATE.item().clone(), SlimefunItems.BLISTERING_INGOT_3.item().clone(), Materials.MACHINE_PLATE.item().clone()
         });
         OSCILLATORS.put(getId(), this);
         this.chance = chance;

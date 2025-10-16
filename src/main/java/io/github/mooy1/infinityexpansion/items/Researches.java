@@ -1,5 +1,6 @@
 package io.github.mooy1.infinityexpansion.items;
 
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import lombok.experimental.UtilityClass;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
@@ -13,6 +14,9 @@ import io.github.mooy1.infinityexpansion.items.quarries.Quarries;
 import io.github.mooy1.infinityexpansion.items.storage.Storage;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.researches.Research;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @UtilityClass
 public final class Researches {
@@ -134,8 +138,17 @@ public final class Researches {
         );
     }
 
-    private static void create(int id, String key, String name, int cost, SlimefunItemStack... items) {
-        new Research(InfinityExpansion.createKey(key), FIRST_RESEARCH_ID + id, name, cost).addItems(items).register();
-    }
+    private static void create(int id, String key, String name, int cost, SlimefunItemStack... stacks) {
+        var research = new Research(InfinityExpansion.createKey(key), FIRST_RESEARCH_ID + id, name, cost);
 
+        List<SlimefunItem> items = new ArrayList<>();
+        for (SlimefunItemStack s : stacks) {
+            var it = s.getItem();
+            if (it != null) {
+                items.add(it);
+            }
+        }
+
+        research.addItems(items.toArray(new SlimefunItem[0]));
+    }
 }

@@ -43,17 +43,17 @@ public final class Blocks {
         new StrainerBase(Groups.BASIC_MACHINES, STRAINER_BASE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 new ItemStack(Material.STICK), new ItemStack(Material.STRING), new ItemStack(Material.STICK),
                 new ItemStack(Material.STICK), new ItemStack(Material.STRING), new ItemStack(Material.STICK),
-                Materials.MAGSTEEL, Materials.MAGSTEEL, Materials.MAGSTEEL,
+                Materials.MAGSTEEL.item().clone(), Materials.MAGSTEEL.item().clone(), Materials.MAGSTEEL.item().clone(),
         }, 48).register(plugin);
         new AdvancedAnvil(Groups.MAIN_MATERIALS, ADVANCED_ANVIL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MACHINE_PLATE, Materials.MACHINE_PLATE, Materials.MACHINE_PLATE,
-                Materials.MACHINE_PLATE, new ItemStack(Material.ANVIL), Materials.MACHINE_PLATE,
-                Materials.MACHINE_CIRCUIT, Materials.MACHINE_CORE, Materials.MACHINE_CIRCUIT
+                Materials.MACHINE_PLATE.item().clone(), Materials.MACHINE_PLATE.item().clone(), Materials.MACHINE_PLATE.item().clone(),
+                Materials.MACHINE_PLATE.item().clone(), new ItemStack(Material.ANVIL), Materials.MACHINE_PLATE.item().clone(),
+                Materials.MACHINE_CIRCUIT.item().clone(), Materials.MACHINE_CORE.item().clone(), Materials.MACHINE_CIRCUIT.item().clone()
         }, 100000).register(plugin);
         new InfinityWorkbench(Groups.MAIN_MATERIALS, INFINITY_FORGE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.VOID_INGOT, Materials.MACHINE_PLATE, Materials.VOID_INGOT,
-                SlimefunItems.ENERGIZED_CAPACITOR, new ItemStack(Material.CRAFTING_TABLE), SlimefunItems.ENERGIZED_CAPACITOR,
-                Materials.VOID_INGOT, Materials.MACHINE_PLATE, Materials.VOID_INGOT
+                Materials.VOID_INGOT.item().clone(), Materials.MACHINE_PLATE.item().clone(), Materials.VOID_INGOT.item().clone(),
+                SlimefunItems.ENERGIZED_CAPACITOR.item().clone(), new ItemStack(Material.CRAFTING_TABLE), SlimefunItems.ENERGIZED_CAPACITOR.item().clone(),
+                Materials.VOID_INGOT.item().clone(), Materials.MACHINE_PLATE.item().clone(), Materials.VOID_INGOT.item().clone()
         }, 10000000).register(plugin);
     }
 

@@ -9,10 +9,12 @@ import java.util.logging.Level;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+import lombok.NonNull;
 import lombok.experimental.UtilityClass;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Waterlogged;
@@ -23,6 +25,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
+import org.jetbrains.annotations.NotNull;
 
 @UtilityClass
 public final class Util {
@@ -72,39 +75,39 @@ public final class Util {
     private static Enchantment enchantmentByPath(@Nonnull String path) {
         switch (path) {
             case "sharpness":
-                return Enchantment.DAMAGE_ALL;
+                return Enchantment.SHARPNESS;
             case "smite":
-                return Enchantment.DAMAGE_UNDEAD;
+                return Enchantment.SMITE;
             case "bane-of-arthropods":
-                return Enchantment.DAMAGE_ARTHROPODS;
+                return Enchantment.BANE_OF_ARTHROPODS;
             case "efficiency":
-                return Enchantment.DIG_SPEED;
+                return Enchantment.EFFICIENCY;
             case "protection":
-                return Enchantment.PROTECTION_ENVIRONMENTAL;
+                return Enchantment.PROTECTION;
             case "fire-aspect":
                 return Enchantment.FIRE_ASPECT;
             case "fortune":
-                return Enchantment.LOOT_BONUS_BLOCKS;
+                return Enchantment.FORTUNE;
             case "looting":
-                return Enchantment.LOOT_BONUS_MOBS;
+                return Enchantment.LOOTING;
             case "silk-touch":
                 return Enchantment.SILK_TOUCH;
             case "thorns":
                 return Enchantment.THORNS;
             case "aqua-affinity":
-                return Enchantment.WATER_WORKER;
+                return Enchantment.AQUA_AFFINITY;
             case "power":
-                return Enchantment.ARROW_DAMAGE;
+                return Enchantment.POWER;
             case "flame":
-                return Enchantment.ARROW_FIRE;
+                return Enchantment.FLAME;
             case "infinity":
-                return Enchantment.ARROW_INFINITE;
+                return Enchantment.INFINITY;
             case "punch":
-                return Enchantment.ARROW_KNOCKBACK;
+                return Enchantment.PUNCH;
             case "feather-falling":
-                return Enchantment.PROTECTION_FALL;
+                return Enchantment.FEATHER_FALLING;
             case "unbreaking":
-                return Enchantment.DURABILITY;
+                return Enchantment.UNBREAKING;
             default:
                 return null;
         }
@@ -149,4 +152,19 @@ public final class Util {
         }
     }
 
+    /**
+     * Returns a copy of the item with the set quantity.
+     */
+    public static @NonNull ItemStack withAmount(@NotNull ItemStack base, int amount) {
+        ItemStack copy = base.clone();
+        copy.setAmount(amount);
+        return copy;
+    }
+
+    /**
+     * Quickly create an ItemStack from a Material with a given quantity
+     */
+    public static @NonNull ItemStack of(@NonNull Material material, int amount) {
+        return new ItemStack(material, Math.max(1, amount));
+    }
 }

@@ -287,55 +287,55 @@ public final class Materials {
                 new ItemStack(Material.COBBLESTONE), new ItemStack(Material.COBBLESTONE), new ItemStack(Material.COBBLESTONE)
         });
         registerEnhanced(COBBLE_2, new ItemStack[] {
-                COBBLE_1, COBBLE_1, COBBLE_1,
-                COBBLE_1, COBBLE_1, COBBLE_1,
-                COBBLE_1, COBBLE_1, COBBLE_1
+                COBBLE_1.item().clone(), COBBLE_1.item().clone(), COBBLE_1.item().clone(),
+                COBBLE_1.item().clone(), COBBLE_1.item().clone(), COBBLE_1.item().clone(),
+                COBBLE_1.item().clone(), COBBLE_1.item().clone(), COBBLE_1.item().clone()
         });
         registerEnhanced(COBBLE_3, new ItemStack[] {
-                COBBLE_2, COBBLE_2, COBBLE_2,
-                COBBLE_2, COBBLE_2, COBBLE_2,
-                COBBLE_2, COBBLE_2, COBBLE_2
+                COBBLE_2.item().clone(), COBBLE_2.item().clone(), COBBLE_2.item().clone(),
+                COBBLE_2.item().clone(), COBBLE_2.item().clone(), COBBLE_2.item().clone(),
+                COBBLE_2.item().clone(), COBBLE_2.item().clone(), COBBLE_2.item().clone()
         });
         registerEnhanced(COBBLE_4, new ItemStack[] {
-                COBBLE_3, COBBLE_3, COBBLE_3,
-                COBBLE_3, COBBLE_3, COBBLE_3,
-                COBBLE_3, COBBLE_3, COBBLE_3
+                COBBLE_3.item().clone(), COBBLE_3.item().clone(), COBBLE_3.item().clone(),
+                COBBLE_3.item().clone(), COBBLE_3.item().clone(), COBBLE_3.item().clone(),
+                COBBLE_3.item().clone(), COBBLE_3.item().clone(), COBBLE_3.item().clone()
         });
         registerEnhanced(COBBLE_5, new ItemStack[] {
-                COBBLE_4, COBBLE_4, COBBLE_4,
-                COBBLE_4, COBBLE_4, COBBLE_4,
-                COBBLE_4, COBBLE_4, COBBLE_4
+                COBBLE_4.item().clone(), COBBLE_4.item().clone(), COBBLE_4.item().clone(),
+                COBBLE_4.item().clone(), COBBLE_4.item().clone(), COBBLE_4.item().clone(),
+                COBBLE_4.item().clone(), COBBLE_4.item().clone(), COBBLE_4.item().clone()
         });
         registerEnhanced(VOID_DUST, new ItemStack[] {
-                VOID_BIT, VOID_BIT, VOID_BIT,
-                VOID_BIT, VOID_BIT, VOID_BIT,
-                VOID_BIT, VOID_BIT, VOID_BIT
+                VOID_BIT.item().clone(), VOID_BIT.item().clone(), VOID_BIT.item().clone(),
+                VOID_BIT.item().clone(), VOID_BIT.item().clone(), VOID_BIT.item().clone(),
+                VOID_BIT.item().clone(), VOID_BIT.item().clone(), VOID_BIT.item().clone()
         });
         registerEnhanced(VOID_INGOT, new ItemStack[] {
-                VOID_DUST, VOID_DUST, VOID_DUST,
-                VOID_DUST, VOID_DUST, VOID_DUST,
-                VOID_DUST, VOID_DUST, VOID_DUST
+                VOID_DUST.item().clone(), VOID_DUST.item().clone(), VOID_DUST.item().clone(),
+                VOID_DUST.item().clone(), VOID_DUST.item().clone(), VOID_DUST.item().clone(),
+                VOID_DUST.item().clone(), VOID_DUST.item().clone(), VOID_DUST.item().clone()
         });
-        registerSmeltery(INFINITE_INGOT, EARTH_SINGULARITY, MYTHRIL, FORTUNE_SINGULARITY, MAGIC_SINGULARITY, VOID_INGOT, METAL_SINGULARITY);
-        registerSmeltery(FORTUNE_SINGULARITY, GOLD_SINGULARITY, DIAMOND_SINGULARITY, EMERALD_SINGULARITY, NETHERITE_SINGULARITY, ADAMANTITE);
-        registerSmeltery(MAGIC_SINGULARITY, REDSTONE_SINGULARITY, LAPIS_SINGULARITY, QUARTZ_SINGULARITY, MAGNESIUM_SINGULARITY, MAGNONIUM);
-        registerSmeltery(EARTH_SINGULARITY, COBBLE_4, COAL_SINGULARITY, IRON_SINGULARITY, COPPER_SINGULARITY, LEAD_SINGULARITY);
-        registerSmeltery(METAL_SINGULARITY, SILVER_SINGULARITY, ALUMINUM_SINGULARITY, TIN_SINGULARITY, ZINC_SINGULARITY, TITANIUM);
-        registerSmeltery(MAGSTEEL, SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.STEEL_INGOT, SlimefunItems.MAGNESIUM_DUST);
-        registerSmeltery(TITANIUM, SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.DAMASCUS_STEEL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
-        registerSmeltery(MYTHRIL, SlimefunItems.REINFORCED_ALLOY_INGOT, IRON_SINGULARITY, SlimefunItems.HARDENED_METAL_INGOT);
-        registerSmeltery(ADAMANTITE, SlimefunItems.REDSTONE_ALLOY, DIAMOND_SINGULARITY, MAGSTEEL);
-        registerSmeltery(MAGNONIUM, MAGSTEEL, MAGNESIUM_SINGULARITY, ENDER_ESSENCE);
+        registerSmeltery(INFINITE_INGOT, EARTH_SINGULARITY.item().clone(), MYTHRIL.item().clone(), FORTUNE_SINGULARITY.item().clone(), MAGIC_SINGULARITY.item().clone(), VOID_INGOT.item().clone(), METAL_SINGULARITY.item().clone());
+        registerSmeltery(FORTUNE_SINGULARITY, GOLD_SINGULARITY.item().clone(), DIAMOND_SINGULARITY.item().clone(), EMERALD_SINGULARITY.item().clone(), NETHERITE_SINGULARITY.item().clone(), ADAMANTITE.item().clone());
+        registerSmeltery(MAGIC_SINGULARITY, REDSTONE_SINGULARITY.item().clone(), LAPIS_SINGULARITY.item().clone(), QUARTZ_SINGULARITY.item().clone(), MAGNESIUM_SINGULARITY.item().clone(), MAGNONIUM.item().clone());
+        registerSmeltery(EARTH_SINGULARITY, COBBLE_4.item().clone(), COAL_SINGULARITY.item().clone(), IRON_SINGULARITY.item().clone(), COPPER_SINGULARITY.item().clone(), LEAD_SINGULARITY.item().clone());
+        registerSmeltery(METAL_SINGULARITY, SILVER_SINGULARITY.item().clone(), ALUMINUM_SINGULARITY.item().clone(), TIN_SINGULARITY.item().clone(), ZINC_SINGULARITY.item().clone(), TITANIUM.item().clone());
+        registerSmeltery(MAGSTEEL, SlimefunItems.MAGNESIUM_INGOT.item().clone(), SlimefunItems.STEEL_INGOT.item().clone(), SlimefunItems.MAGNESIUM_DUST.item().clone());
+        registerSmeltery(TITANIUM, SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(), SlimefunItems.DAMASCUS_STEEL_INGOT.item().clone(), SlimefunItems.HARDENED_METAL_INGOT.item().clone());
+        registerSmeltery(MYTHRIL, SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(), IRON_SINGULARITY.item().clone(), SlimefunItems.HARDENED_METAL_INGOT.item().clone());
+        registerSmeltery(ADAMANTITE, SlimefunItems.REDSTONE_ALLOY.item().clone(), DIAMOND_SINGULARITY.item().clone(), MAGSTEEL.item().clone());
+        registerSmeltery(MAGNONIUM, MAGSTEEL.item().clone(), MAGNESIUM_SINGULARITY.item().clone(), ENDER_ESSENCE.item().clone());
         register(VOID_BIT, VoidHarvester.TYPE, new ItemStack[0]);
         registerEnhanced(MAGSTEEL_PLATE, new ItemStack[] {
-                MAGSTEEL, MAGSTEEL, MAGSTEEL,
-                MAGSTEEL, SlimefunItems.HARDENED_METAL_INGOT, MAGSTEEL,
-                MAGSTEEL, MAGSTEEL, MAGSTEEL
+                MAGSTEEL.item().clone(), MAGSTEEL.item().clone(), MAGSTEEL.item().clone(),
+                MAGSTEEL.item().clone(), SlimefunItems.HARDENED_METAL_INGOT.item().clone(), MAGSTEEL.item().clone(),
+                MAGSTEEL.item().clone(), MAGSTEEL.item().clone(), MAGSTEEL.item().clone()
         });
         registerEnhanced(MACHINE_CIRCUIT, new ItemStack[] {
-                SlimefunItems.COPPER_INGOT, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.COPPER_INGOT,
-                SlimefunItems.COPPER_INGOT, SlimefunItems.SILICON, SlimefunItems.COPPER_INGOT,
-                SlimefunItems.COPPER_INGOT, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.COPPER_INGOT
+                SlimefunItems.COPPER_INGOT.item().clone(), SlimefunItems.ELECTRO_MAGNET.item().clone(), SlimefunItems.COPPER_INGOT.item().clone(),
+                SlimefunItems.COPPER_INGOT.item().clone(), SlimefunItems.SILICON.item().clone(), SlimefunItems.COPPER_INGOT.item().clone(),
+                SlimefunItems.COPPER_INGOT.item().clone(), SlimefunItems.ELECTRO_MAGNET.item().clone(), SlimefunItems.COPPER_INGOT.item().clone()
         });
         new Strainer(BASIC_STRAINER, new ItemStack[] {
                 new ItemStack(Material.STICK), new ItemStack(Material.STRING), new ItemStack(Material.STICK),
@@ -343,40 +343,40 @@ public final class Materials {
                 new ItemStack(Material.STICK), new ItemStack(Material.STRING), new ItemStack(Material.STICK),
         }, 1).register(plugin);
         new Strainer(ADVANCED_STRAINER, new ItemStack[] {
-                Materials.MAGSTEEL, new ItemStack(Material.STRING), Materials.MAGSTEEL,
-                new ItemStack(Material.STRING), BASIC_STRAINER, new ItemStack(Material.STRING),
-                Materials.MAGSTEEL, new ItemStack(Material.STRING), Materials.MAGSTEEL
+                Materials.MAGSTEEL.item().clone(), new ItemStack(Material.STRING), Materials.MAGSTEEL.item().clone(),
+                new ItemStack(Material.STRING), BASIC_STRAINER.item().clone(), new ItemStack(Material.STRING),
+                Materials.MAGSTEEL.item().clone(), new ItemStack(Material.STRING), Materials.MAGSTEEL.item().clone()
         }, 4).register(plugin);
         new Strainer(REINFORCED_STRAINER, new ItemStack[] {
-                SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT,
-                new ItemStack(Material.STRING), ADVANCED_STRAINER, new ItemStack(Material.STRING),
-                SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT
+                SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(), new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(),
+                new ItemStack(Material.STRING), ADVANCED_STRAINER.item().clone(), new ItemStack(Material.STRING),
+                SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(), new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone()
         }, 20).register(plugin);
         registerEnhanced(MACHINE_CORE, new ItemStack[] {
-                TITANIUM, MACHINE_CIRCUIT, TITANIUM,
-                MACHINE_CIRCUIT, MACHINE_PLATE, MACHINE_CIRCUIT,
-                TITANIUM, MACHINE_CIRCUIT, TITANIUM
+                TITANIUM.item().clone(), MACHINE_CIRCUIT.item().clone(), TITANIUM.item().clone(),
+                MACHINE_CIRCUIT.item().clone(), MACHINE_PLATE.item().clone(), MACHINE_CIRCUIT.item().clone(),
+                TITANIUM.item().clone(), MACHINE_CIRCUIT.item().clone(), TITANIUM.item().clone()
         });
         registerEnhanced(MACHINE_PLATE, new ItemStack[] {
-                SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_PLATE, SlimefunItems.REINFORCED_ALLOY_INGOT,
-                MAGSTEEL_PLATE, TITANIUM, MAGSTEEL_PLATE,
-                SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_PLATE, SlimefunItems.REINFORCED_ALLOY_INGOT
+                SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(), SlimefunItems.REINFORCED_PLATE.item().clone(), SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(),
+                MAGSTEEL_PLATE.item().clone(), TITANIUM.item().clone(), MAGSTEEL_PLATE.item().clone(),
+                SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone(), SlimefunItems.REINFORCED_PLATE.item().clone(), SlimefunItems.REINFORCED_ALLOY_INGOT.item().clone()
         });
         register(Groups.INFINITY_CHEAT, INFINITE_CIRCUIT, InfinityWorkbench.TYPE, new ItemStack[] {
-                MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT,
-                VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT, VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT,
-                INFINITE_INGOT, VOID_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, VOID_INGOT, INFINITE_INGOT,
-                INFINITE_INGOT, VOID_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, VOID_INGOT, INFINITE_INGOT,
-                VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT, VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT,
-                MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT
+                MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(),
+                VOID_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), VOID_INGOT.item().clone(), VOID_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), VOID_INGOT.item().clone(),
+                INFINITE_INGOT.item().clone(), VOID_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_CIRCUIT.item().clone(), VOID_INGOT.item().clone(), INFINITE_INGOT.item().clone(),
+                INFINITE_INGOT.item().clone(), VOID_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_CIRCUIT.item().clone(), VOID_INGOT.item().clone(), INFINITE_INGOT.item().clone(),
+                VOID_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), VOID_INGOT.item().clone(), VOID_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), VOID_INGOT.item().clone(),
+                MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone()
         });
         register(Groups.INFINITY_CHEAT, INFINITE_CORE, InfinityWorkbench.TYPE, new ItemStack[] {
-                MACHINE_PLATE, MACHINE_CORE, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CORE, MACHINE_PLATE,
-                MACHINE_CORE, MACHINE_PLATE, MACHINE_CIRCUIT, MACHINE_CIRCUIT, MACHINE_PLATE, MACHINE_CORE,
-                INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT,
-                INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT,
-                MACHINE_CORE, MACHINE_PLATE, MACHINE_CIRCUIT, MACHINE_CIRCUIT, MACHINE_PLATE, MACHINE_CORE,
-                MACHINE_PLATE, MACHINE_CORE, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CORE, MACHINE_PLATE
+                MACHINE_PLATE.item().clone(), MACHINE_CORE.item().clone(), INFINITE_INGOT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CORE.item().clone(), MACHINE_PLATE.item().clone(),
+                MACHINE_CORE.item().clone(), MACHINE_PLATE.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_PLATE.item().clone(), MACHINE_CORE.item().clone(),
+                INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(),
+                INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CIRCUIT.item().clone(), INFINITE_INGOT.item().clone(),
+                MACHINE_CORE.item().clone(), MACHINE_PLATE.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_CIRCUIT.item().clone(), MACHINE_PLATE.item().clone(), MACHINE_CORE.item().clone(),
+                MACHINE_PLATE.item().clone(), MACHINE_CORE.item().clone(), INFINITE_INGOT.item().clone(), INFINITE_INGOT.item().clone(), MACHINE_CORE.item().clone(), MACHINE_PLATE.item().clone()
         });
         new Singularity(COPPER_SINGULARITY, SlimefunItems.COPPER_INGOT, 3000).register(plugin);
         new Singularity(ZINC_SINGULARITY, SlimefunItems.ZINC_INGOT, 3000).register(plugin);

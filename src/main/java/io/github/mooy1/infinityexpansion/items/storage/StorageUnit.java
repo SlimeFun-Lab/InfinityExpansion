@@ -66,14 +66,14 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     static final int INTERACT_SLOT = 22;
 
     /* Menu items */
-    private static final ItemStack INTERACTION_ITEM = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
+    private static final ItemStack INTERACTION_ITEM = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE,
             "&aQuick Actions",
             "&bLeft Click: &7Withdraw 1 item",
             "&bRight Click: &7Withdraw 1 stack",
             "&bShift Left Click: &7Deposit inventory",
             "&bShift Right Click: &7Withdraw inventory"
     );
-    private static final ItemStack LOADING_ITEM = new CustomItemStack(Material.CYAN_STAINED_GLASS_PANE,
+    private static final ItemStack LOADING_ITEM = CustomItemStack.create(Material.CYAN_STAINED_GLASS_PANE,
             "&bStatus",
             "&7Loading..."
     );
@@ -206,7 +206,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
             lore.add(ChatColor.GOLD + "Stored: " + displayName + ChatColor.YELLOW + " x " + amount);
             meta.setLore(lore);
         }
-        meta.getPersistentDataContainer().set(ITEM_KEY, PersistentType.ITEM_STACK_OLD, displayItem);
+        meta.getPersistentDataContainer().set(ITEM_KEY, PersistentType.ITEM_STACK, displayItem);
         meta.getPersistentDataContainer().set(AMOUNT_KEY, PersistentDataType.INTEGER, amount);
         return meta;
     }
@@ -217,7 +217,7 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
             PersistentDataContainer con = source.getItemMeta().getPersistentDataContainer();
             Integer amount = con.get(AMOUNT_KEY, PersistentDataType.INTEGER);
             if (amount != null) {
-                ItemStack item = con.get(ITEM_KEY, PersistentType.ITEM_STACK_OLD);
+                ItemStack item = con.get(ITEM_KEY, PersistentType.ITEM_STACK);
                 if (item != null) {
                     return new Pair<>(item, amount);
                 }

@@ -1,11 +1,9 @@
 package io.github.mooy1.infinityexpansion;
 
-import java.io.File;
+
 import java.util.logging.Level;
 
 import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.java.JavaPluginLoader;
 
 import io.github.mooy1.infinityexpansion.categories.Groups;
 import io.github.mooy1.infinityexpansion.commands.GiveRecipe;
@@ -21,22 +19,14 @@ import io.github.mooy1.infinityexpansion.items.materials.Materials;
 import io.github.mooy1.infinityexpansion.items.mobdata.MobData;
 import io.github.mooy1.infinityexpansion.items.quarries.Quarries;
 import io.github.mooy1.infinityexpansion.items.storage.Storage;
-import io.github.mooy1.infinityexpansion.items.storage.StorageSaveFix;
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 import io.github.mooy1.infinitylib.metrics.bukkit.Metrics;
 import io.github.mooy1.infinitylib.metrics.charts.SimplePie;
 
 public class InfinityExpansion extends AbstractAddon {
-
-    public InfinityExpansion(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
-        super(loader, description, dataFolder, file,
-                "Mooy1", "InfinityExpansion", "master", "auto-update");
-    }
-
     public InfinityExpansion() {
-        super("Mooy1", "InfinityExpansion", "master", "auto-update");
-        StorageSaveFix.fixStuff(getLogger());
+        super("SlimeFun-Lab", "InfinityExpansion", "master", "auto-update");
     }
 
     @Override

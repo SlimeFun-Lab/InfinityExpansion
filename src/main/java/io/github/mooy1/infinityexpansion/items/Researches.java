@@ -60,7 +60,7 @@ public final class Researches {
         );
         create(5, "mob_data", "Virtual Mob Farms", 30,
                 MobData.CHAMBER, MobData.EMPTY_DATA_CARD, MobData.INFUSER,
-                MobData.COW, MobData.SHEEP, MobData.CHICKEN
+                MobData.COW, MobData.PIG, MobData.SHEEP, MobData.CHICKEN
         );
         create(6, "oscillators", "Improving Quarries", 30,
                 Quarries.DIAMOND_OSCILLATOR, Quarries.EMERALD_OSCILLATOR, Quarries.LAPIS_OSCILLATOR,

@@ -67,11 +67,23 @@ public final class Quarries {
     public static final double LAPIS_CHANCE = getOscillatorChance("lapis");
     public static final double EMERALD_CHANCE = getOscillatorChance("emerald");
     public static final double QUARTZ_CHANCE = getOscillatorChance("quartz");
+
+    public static final double COPPER_CHANCE = getOscillatorChance("copper");
+    public static final double IRON_CHANCE = getOscillatorChance("iron");
+    public static final double GOLD_CHANCE = getOscillatorChance("gold");
+    public static final double NETHERITE_CHANCE = getOscillatorChance("netherite");
+    public static final double COAL_CHANCE = getOscillatorChance("coal");
+
     public static final SlimefunItemStack DIAMOND_OSCILLATOR = Oscillator.create(Material.DIAMOND, DIAMOND_CHANCE);
     public static final SlimefunItemStack REDSTONE_OSCILLATOR = Oscillator.create(Material.REDSTONE, REDSTONE_CHANCE);
     public static final SlimefunItemStack LAPIS_OSCILLATOR = Oscillator.create(Material.LAPIS_LAZULI, LAPIS_CHANCE);
     public static final SlimefunItemStack QUARTZ_OSCILLATOR = Oscillator.create(Material.QUARTZ, QUARTZ_CHANCE);
     public static final SlimefunItemStack EMERALD_OSCILLATOR = Oscillator.create(Material.EMERALD, EMERALD_CHANCE);
+
+    public static final SlimefunItemStack IRON_OSCILLATOR = Oscillator.create(Material.IRON_INGOT, IRON_CHANCE);
+    public static final SlimefunItemStack GOLD_OSCILLATOR = Oscillator.create(Material.GOLD_INGOT, GOLD_CHANCE);
+    public static final SlimefunItemStack NETHERITE_OSCILLATOR = Oscillator.create(Material.NETHERITE_INGOT, NETHERITE_CHANCE);
+    public static final SlimefunItemStack COAL_OSCILLATOR = Oscillator.create(Material.COAL, COAL_CHANCE);
 
     private static double getOscillatorChance(String type) {
         return InfinityExpansion.config().getDouble("quarry-options.oscillators." + type, 0, 1);
@@ -85,20 +97,28 @@ public final class Quarries {
         boolean coal = section.getBoolean("coal");
 
         if (coal) {
-            outputs.add(Material.COAL);
+            new Oscillator(COAL_OSCILLATOR, COAL_CHANCE).register(plugin);
+
             outputs.add(Material.COAL);
         }
 
         if (section.getBoolean("iron")) {
+            new Oscillator(IRON_OSCILLATOR, IRON_CHANCE).register(plugin);
             outputs.add(Material.IRON_INGOT);
         }
 
         if (section.getBoolean("gold")) {
+            new Oscillator(GOLD_OSCILLATOR, GOLD_CHANCE).register(plugin);
             outputs.add(Material.GOLD_INGOT);
         }
 
-        if (Slimefun.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_17) && section.getBoolean("copper")) {
-            outputs.add(Material.COPPER_INGOT);
+        if (Slimefun.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_17)
+                && section.getBoolean("copper")) {
+
+            SlimefunItemStack COPPER_OSCILLATOR =
+                    Oscillator.create(Material.COPPER_INGOT, COPPER_CHANCE);
+
+            new Oscillator(COPPER_OSCILLATOR, COPPER_CHANCE).register(plugin);
             outputs.add(Material.COPPER_INGOT);
         }
 
@@ -135,6 +155,7 @@ public final class Quarries {
         }
 
         if (section.getBoolean("netherite")) {
+            new Oscillator(NETHERITE_OSCILLATOR, NETHERITE_CHANCE).register(plugin);
             outputs.add(Material.NETHERITE_INGOT);
         }
 

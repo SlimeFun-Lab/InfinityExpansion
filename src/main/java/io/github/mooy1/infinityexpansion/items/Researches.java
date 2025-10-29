@@ -64,7 +64,8 @@ public final class Researches {
         );
         create(6, "oscillators", "Improving Quarries", 30,
                 Quarries.DIAMOND_OSCILLATOR, Quarries.EMERALD_OSCILLATOR, Quarries.LAPIS_OSCILLATOR,
-                Quarries.REDSTONE_OSCILLATOR, Quarries.QUARTZ_OSCILLATOR
+                Quarries.REDSTONE_OSCILLATOR, Quarries.QUARTZ_OSCILLATOR, Quarries.IRON_OSCILLATOR,
+                Quarries.GOLD_OSCILLATOR, Quarries.NETHERITE_OSCILLATOR, Quarries.COAL_OSCILLATOR
         );
         create(7, "machine_materials", "Machine Materials", 20,
                 Materials.MAGSTEEL, Materials.MAGSTEEL_PLATE, Materials.MACHINE_CIRCUIT,

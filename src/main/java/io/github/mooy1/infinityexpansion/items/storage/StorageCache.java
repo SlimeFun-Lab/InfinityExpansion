@@ -72,8 +72,13 @@ public final class StorageCache {
     private Material material;
     private ItemMeta meta;
     private boolean voidExcess;
+
     @Setter
     private int amount;
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 
     StorageCache(StorageUnit storageUnit, BlockMenu menu) {
         this.storageUnit = storageUnit;
@@ -227,6 +232,17 @@ public final class StorageCache {
         }
     }
 
+    ItemStack getStoredItemTemplate() {
+        if (isEmpty() || this.material == null) {
+            return null;
+        }
+        ItemStack item = new ItemStack(this.material, 1);
+        if (this.meta != null) {
+            item.setItemMeta(this.meta);
+        }
+        return item;
+    }
+
     private void setEmptyDisplayName() {
         this.displayName = EMPTY_DISPLAY_NAME;
         this.signDisplay[0] = EMPTY_DISPLAY_NAME;
@@ -245,8 +261,25 @@ public final class StorageCache {
             }
         }
 
+        if (isEmpty()) {
+            drops.add(this.storageUnit.getItem().clone());
+            return;
+        }
+
+        ItemStack storedTemplate = getStoredItemTemplate();
+        if (storedTemplate == null) {
+            drops.add(this.storageUnit.getItem().clone());
+            return;
+        }
+
         ItemStack drop = this.storageUnit.getItem().clone();
-        drop.setItemMeta(StorageUnit.saveToStack(drop.getItemMeta(), this.menu.getItemInSlot(DISPLAY_SLOT), this.displayName, this.amount));
+        drop.setItemMeta(StorageUnit.saveToStack(
+                drop.getItemMeta(),
+                storedTemplate,
+                this.displayName,
+                this.amount
+        ));
+
         e.getPlayer().sendMessage(ChatColor.GREEN + "Stored items transferred to dropped item");
         drops.add(drop);
     }

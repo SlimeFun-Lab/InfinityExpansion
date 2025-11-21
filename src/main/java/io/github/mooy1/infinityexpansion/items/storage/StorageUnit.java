@@ -135,13 +135,32 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     @Override
     protected void onPlace(@Nonnull BlockPlaceEvent e, @Nonnull Block b) {
         Pair<ItemStack, Integer> data = loadFromStack(e.getItemInHand());
-        if (data != null) {
-            Scheduler.run(() -> {
-                StorageCache cache = this.caches.get(b.getLocation());
-                cache.load(data.getFirstValue(), data.getFirstValue().getItemMeta());
-                cache.amount(data.getSecondValue());
-            });
+        if (data == null) {
+            return;
         }
+
+        Scheduler.run(() -> {
+            StorageCache cache = this.caches.get(b.getLocation());
+            if (cache == null) {
+                return;
+            }
+
+            ItemStack storedItem = data.getFirstValue();
+            if (storedItem == null) {
+                return;
+            }
+
+            cache.load(storedItem, storedItem.getItemMeta());
+            cache.setAmount(data.getSecondValue());
+        });
+
+//        if (data != null) {
+//            Scheduler.run(() -> {
+//                StorageCache cache = this.caches.get(b.getLocation());
+//                cache.load(data.getFirstValue(), data.getFirstValue().getItemMeta());
+//                cache.amount(data.getSecondValue());
+//            });
+//        }
     }
 
     @Override
@@ -184,7 +203,10 @@ public final class StorageUnit extends MenuBlock implements DistinctiveItem {
     }
 
     public void reloadCache(Block b) {
-        this.caches.get(b.getLocation()).reloadData();
+        StorageCache cache = this.caches.get(b.getLocation());
+        if (cache != null) {
+            cache.reloadData();
+        }
     }
 
     @Nullable
